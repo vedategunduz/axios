@@ -14,13 +14,12 @@
             e.preventDefault();
             const formData = new FormData(e.target);
 
-            const RESPONSE = await ApiService.fetchData('/test', formData, 'POST');
+            const RESPONSE = await ApiService.fetchData('api/test', formData, 'POST');
 
-            if (RESPONSE.success) {
+            if (RESPONSE.success)
                 ApiService.alert.success(RESPONSE.message);
-            } else {
+            else
                 ApiService.alert.error(RESPONSE.message);
-            }
         });
     </script>
 @endsection

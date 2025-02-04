@@ -1,11 +1,11 @@
 import axios from 'axios'
 
 const BASE_URL = window.location.origin;
-const CSRF_TOKEN = document.head.querySelector('meta[name="csrf-token"]').content;
+// const CSRF_TOKEN = document.head.querySelector('meta[name="csrf-token"]').content;
 
 axios.defaults.baseURL = BASE_URL;
 axios.defaults.headers.common['Accept'] = 'application/json';
-axios.defaults.headers.common['X-CSRF-TOKEN'] = CSRF_TOKEN;
+// axios.defaults.headers.common['X-CSRF-TOKEN'] = CSRF_TOKEN;
 
 async function fetchData(URL, DATA = null, METHOD = 'GET') {
     try {
